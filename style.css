@@ -1,0 +1,650 @@
+:root {
+    --color-brown: #C79E45;
+    --color-bg: #F2F2F2;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+}
+
+.content {
+    background-color: var(--color-bg);
+}
+
+.nav_mobile,
+.bottom_nav_mobile {
+    display: none;
+}
+
+.cover_image {
+    background-image: url('img/7e2pe9wjL9M.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.breadcrumb_1 {
+    height: 56px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    opacity: 0.9;
+    background-color: white;
+}
+
+.cover_content_text {
+    margin-left: 5%;
+    width: 50%;
+}
+
+.cover_title {
+    font-size: 50px;
+    font-weight: 200;
+    line-height: 1;
+}
+
+.cover_subtitle {
+    font-style: italic;
+    line-height: 1.7;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.content_btn_figure {
+    width: 100%;
+    display: flex;
+}
+
+.btn_figure {
+    background-color: var(--color-brown);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.arrow_right {
+    font-size: 27px;
+    margin-left: 10px;
+}
+
+
+/************************* OFFICE SECTION **********************/
+
+.office_section {
+    padding: 5%;
+    width: 100%;
+}
+
+.descrip_dg_section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image_dg_a_desc {
+    width: 65%;
+    display: grid;
+    grid-template-areas: "a b""a c";
+    grid-column-gap: 3%;
+    grid-template-rows: auto auto;
+}
+
+.img_dg_web {
+    grid-area: a;
+    height: auto;
+}
+
+.img_dg_mobile {
+    display: none;
+}
+
+.desc_title_dg {
+    grid-area: b;
+    width: 70%;
+}
+
+.content_see_more {
+    display: none;
+}
+
+.desc_subtitle_dg {
+    grid-area: c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.office_title {
+    color: var(--color-brown);
+    font-weight: bolder;
+}
+
+.office_title i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.office_des {
+    width: 25%;
+}
+
+.office_des ul {
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.office_des li {
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+.office_des li p {
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.dg_info {
+    margin-top: 20px;
+    margin-left: calc(198px + 2%);
+}
+
+.dg_info p {
+    font-style: italic;
+    margin-top: 5px;
+}
+
+
+/*********************** LETMOTIV SECTION ************************************/
+
+.letmotiv_section {
+    background-color: #000A2B;
+    padding: 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.ellipse {
+    height: 591px;
+    width: 591px;
+    border-radius: 50%;
+    background-color: #C79E455C;
+}
+
+.ellipse_1 {
+    position: absolute;
+    top: -350px;
+    left: -350px;
+    opacity: 0.7;
+}
+
+.ellipse_2 {
+    position: absolute;
+    bottom: -300px;
+    right: -250px;
+    opacity: 0.9;
+}
+
+.card_content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.card_letmotiv {
+    width: 326px;
+    /* height: 396px; */
+    height: inherit;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 1;
+    margin-left: 3%;
+    margin-right: 3%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.card_letmotiv:first-child {
+    margin-left: 5%;
+}
+
+.card_letmotiv:last-child {
+    margin-right: 5%;
+}
+
+.card_text {
+    margin: 5%;
+    /* height: calc(95% - 160px); */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.see_more {
+    color: var(--color-brown);
+    font-weight: 500;
+}
+
+
+/*************************DIFFERENCE SECTION******************************/
+
+.difference_section {
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.difference_section h1 {
+    font-size: 45px;
+    width: 25%;
+}
+
+.difference_section>div {
+    width: 70%;
+}
+
+.difference_section p {
+    margin-top: 20px;
+}
+
+
+/*************************STATISTIC SECTION******************************/
+
+.statistic_section {
+    background-color: #F8F3E9;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.all_statistic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.statistics {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.statistic {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+}
+
+.stat_element_var_1 {
+    --color-stat: var(--color-brown);
+}
+
+.stat_element_var_2 {
+    --color-stat: #2C39AB;
+}
+
+.stat_element_var_3 {
+    --color-stat: #BA3926;
+}
+
+.stat_element_var_4 {
+    --color-stat: #016523;
+}
+
+.categorie {
+    color: var(--color-stat);
+}
+
+.categorie_name {
+    color: var(--color-stat);
+    opacity: 0.7;
+}
+
+.categorie_count {
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 200;
+}
+
+.stat_element {
+    position: relative;
+}
+
+.figure_divider {
+    display: flex;
+    justify-content: space-between;
+}
+
+.divider {
+    width: 1px;
+    background-color: black;
+    opacity: 0.2;
+    height: 80px;
+    margin-right: 20px;
+    margin-left: 50px;
+}
+
+.stat_plus {
+    font-size: 36px;
+    font-weight: 400;
+    position: absolute;
+    top: -10px;
+    right: -20px;
+}
+
+.figure {
+    width: 70px;
+    height: 70px;
+}
+
+.key_figure {
+    flex: 0.8;
+    text-align: end;
+}
+
+.key_figure>h1 {
+    font-size: 50px;
+}
+
+.key_figure>p {
+    margin-top: 20px;
+}
+
+
+/*************************RECOGNITION SECTION******************************/
+
+.recognition_section {
+    width: 100%;
+}
+
+.content_image {
+    /* display: flex; */
+    width: 100%;
+    position: relative;
+    height: 600px;
+}
+
+.mobile {
+    display: none;
+}
+
+.img_triangle_1 {
+    position: absolute;
+    left: 0px;
+    width: 67%;
+    height: 600px;
+}
+
+.img_triangle_2 {
+    position: absolute;
+    right: 0px;
+    width: 65%;
+    height: 600px;
+}
+
+.recognition_text {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.recognition_text_1 {
+    top: 5%;
+    left: 5%;
+    align-items: flex-start;
+}
+
+.recognition_text_2 {
+    bottom: 5%;
+    right: 5%;
+    align-items: flex-end;
+}
+
+.recognition_text div {
+    padding: 5%;
+    background-color: black;
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    /************************* OFFICE SECTION **********************/
+    .office_section {
+        padding: 5%;
+        width: 100%;
+    }
+    .descrip_dg_section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .image_dg_a_desc {
+        width: 100%;
+        display: grid;
+        grid-template-areas: "a b""a c";
+        grid-column-gap: 3%;
+        grid-template-rows: auto auto;
+    }
+    .office_des {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .office_des ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .dg_info {
+        margin-left: 0px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .cover_image {
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    }
+    .cover_title {
+        font-size: 30px;
+        font-weight: 100;
+    }
+    .cover_content_text {
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 95%;
+    }
+    .breadcrumb_1 {
+        display: none;
+    }
+    .content_btn_figure {
+        justify-content: center;
+    }
+    /*************************OFFICE SECTION**********************/
+    .card_content {
+        justify-content: start;
+    }
+    .card_letmotiv {
+        width: 269px;
+    }
+    .card_image {
+        width: 269px;
+    }
+    .card_letmotiv:first-child {
+        margin-left: 0px;
+    }
+    .card_letmotiv:last-child {
+        margin-right: 0px;
+    }
+    /*************************DIFFERENCE SECTION******************************/
+    .difference_section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .difference_section h1 {
+        font-size: 25px;
+    }
+    .difference_section h1 {
+        width: 100%;
+    }
+    .difference_section>div {
+        width: 100%;
+    }
+    /*************************STATISTIC SECTION******************************/
+    .all_statistic {
+        display: flex;
+        flex-direction: column;
+    }
+    .statistic {
+        margin-top: 30px;
+    }
+    .key_figure {
+        order: 1;
+        width: 90%;
+        text-align: start;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .key_figure h1 {
+        font-size: 24px;
+        font-weight: 900;
+    }
+    .statistics_1 {
+        order: 2;
+        width: 100%;
+    }
+    .statistics_2 {
+        order: 3;
+        width: 100%;
+    }
+    .statistic {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    /************************* OFFICE SECTION **********************/
+    .office_section {}
+    .image_dg_a_desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+    .img_dg_mobile {
+        order: 2;
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+    }
+    .img_dg_web {
+        display: none;
+    }
+    .desc_title_dg {
+        order: 1;
+        width: 100%;
+        font-size: 20px;
+    }
+    .desc_subtitle_dg {
+        order: 3;
+        margin-top: 20px;
+    }
+    .content_see_more {
+        display: block;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .see_more_p {
+        display: none;
+    }
+    .office_des {
+        display: none;
+    }
+    .office_des ul {}
+    /*************************RECOGNITION SECTION******************************/
+    .content_image {
+        height: 800px;
+    }
+    .img_triangle_1 {
+        position: absolute;
+        top: 0px;
+        height: 67%;
+        width: 100%;
+    }
+    .img_triangle_2 {
+        position: absolute;
+        bottom: 0px;
+        height: 67%;
+        width: 100%;
+    }
+    .mobile {
+        display: block;
+    }
+    .web {
+        display: none;
+    }
+    .recognition_text {
+        width: 90%;
+    }
+    .recognition_text_1 {
+        right: 5%;
+        align-items: flex-start;
+        top: 1%;
+    }
+    .recognition_text_2 {
+        left: 5%;
+        align-items: flex-end;
+        bottom: 0.5%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .nav_mobile,
+    .bottom_nav_mobile {
+        display: block;
+    }
+    .bottom_nav_mobile {
+        padding: 10px;
+        padding-right: 30px;
+        padding-left: 30px;
+        margin: 15px;
+        background-color: white;
+        box-shadow: 0px 0px 10px #ccc;
+        border-radius: 15px;
+    }
+    .nav_web,
+    .bottom_nav_web {
+        display: none;
+    }
+}
