@@ -565,6 +565,18 @@
     .card_letmotiv:last-child {
         margin-right: 0px;
     }
+    .ellipse_1 {
+        position: absolute;
+        top: -400px;
+        left: -400px;
+        opacity: 0.7;
+    }
+    .ellipse_2 {
+        position: absolute;
+        bottom: -450px;
+        right: -300px;
+        opacity: 0.9;
+    }
     /*************************DIFFERENCE SECTION******************************/
     .difference_section {
         flex-direction: column;
@@ -653,9 +665,12 @@
         display: none;
     }
     .office_des {
-        display: none;
+        /* display: none; */
     }
     .office_des ul {}
+    .letmotiv_section {
+        padding: 10%;
+    }
     /*************************RECOGNITION SECTION******************************/
     .content_image {
         height: 800px;
@@ -692,7 +707,7 @@
         bottom: 0.5%;
     }
     .btn_to_scroll {
-        bottom: 15%;
+        bottom: 70px;
     }
 }
 

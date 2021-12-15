@@ -1,8 +1,3 @@
-// class Rectangle {
-//     constructor(element) {
-
-//     }
-// }
 let btnFigure = document.querySelector(".btn_figure")
 let iconFleche = document.querySelector(".arrow_right")
 let categoryCount = document.querySelector(".categorie_count")
@@ -28,16 +23,18 @@ window.addEventListener("DOMContentLoaded", (event) => {
     const handleIntersect = function(entries, observer) {
         entries.forEach(function(entry) {
             // verify d'abord si il s'agit d'un element de statistic
-            if (entry.target.classList.contains("categorie_count")) {
-                // verifier le ratio pour etre sur que l'element bien visible a l'ecran
-                let value = entry.target.textContent
-                if (entry.intersectionRatio > ratio) {
+            if (entry.intersectionRatio > ratio) {
+                if (entry.target.classList.contains("categorie_count")) {
+                    // verifier le ratio pour etre sur que l'element bien visible a l'ecran
+                    let value = entry.target.textContent
+                        // if (entry.intersectionRatio > ratio) {
                     console.log("Count observer")
-                        // recuperer la valeur de la statistique
+                        //recuperer la valeur de la statistique
                     let i = 0
                         // verifier si cette valeur possede K
                     if (value.includes("K")) {
                         valueConvert = parseInt(value.slice(0, value.length - 1))
+                        console.log(valueConvert)
                             // creer une intervalle qui permettra d'incrementer la valeur 
                         let interval = window.setInterval(function() {
                             entry.target.innerText = i + "K"
@@ -57,12 +54,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
                         }, 50)
                     }
                     observer.unobserve(entry.target)
-                }
-                // Gerer l'observation des autres elements
-            } else {
-                if (entry.intersectionRatio > ratio) {
+                        // }
+                        // Gerer l'observation des autres elements
+                } else {
+                    // if (entry.intersectionRatio > ratio) {
                     entry.target.classList.add("reveal_y_visible")
                     observer.unobserve(entry.target)
+                        // }
                 }
             }
         })
@@ -97,12 +95,28 @@ let newPosition = 0
 window.addEventListener("scroll", function(e) {
     newPosition = window.scrollY
     if (newPosition > lastPosition) {
-        btnScrollUp.style.transform = "translateY(0px)";
+        window.setTimeout(() => {
+            btnScrollUp.style.transform = "translateY(0px)";
+        }, 200)
     } else {
         btnScrollUp.style.transform = "translateY(300px)";
     }
 
     lastPosition = newPosition
+
+    if (window.innerWidth < 576) {
+        console.log(window.innerWidth)
+        document.querySelectorAll(".card_letmotiv").forEach(function(r) {
+            if (r.classList.contains("reveal_x_left"))
+                r.classList.remove("reveal_x_left")
+            else if (r.classList.contains("reveal_x_rigth"))
+                r.classList.remove("reveal_x_rigth")
+            else if (r.classList.contains("reveal_y_1"))
+                r.classList.remove("reveal_y_1")
+        })
+    }
+
+
 })
 
 function scrollFunction() {
