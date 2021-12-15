@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
                     // verifier le ratio pour etre sur que l'element bien visible a l'ecran
                     let value = entry.target.textContent
                         // if (entry.intersectionRatio > ratio) {
-                    console.log("Count observer")
+                        // console.log("Count observer")
                         //recuperer la valeur de la statistique
                     let i = 0
                         // verifier si cette valeur possede K
@@ -40,10 +40,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
                             entry.target.innerText = i + "K"
                             i++
                             if (entry.target.textContent == valueConvert + "K") {
+                                // entry.target.innerText = entry.target.innerText + "K"
                                 clearInterval(interval)
                             }
                         }, 100)
-
                     } else { // A faire lorsque la stat ne possede pas K
                         let interval = window.setInterval(function() {
                             entry.target.innerText = i
@@ -105,7 +105,7 @@ window.addEventListener("scroll", function(e) {
     lastPosition = newPosition
 
     if (window.innerWidth < 576) {
-        console.log(window.innerWidth)
+        // console.log(window.innerWidth)
         document.querySelectorAll(".card_letmotiv").forEach(function(r) {
             if (r.classList.contains("reveal_x_left"))
                 r.classList.remove("reveal_x_left")
