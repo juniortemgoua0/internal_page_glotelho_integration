@@ -14,6 +14,7 @@
 
 .content {
     background-color: var(--color-bg);
+    position: relative;
 }
 
 .nav_mobile,
@@ -473,6 +474,27 @@
     transform: translateY(0px) translateX(0px);
 }
 
+.btn_to_scroll {
+    position: fixed;
+    background-color: var(--color-brown);
+    color: white;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    bottom: 5%;
+    right: 5%;
+    z-index: 5;
+    transform: translateY(300px);
+    transition: all 0.4s ease-in-out;
+}
+
+.btn_to_scroll:hover {
+    background-color: #dbaf51;
+    box-shadow: 0px 0px 10px #000;
+}
+
 @media screen and (max-width: 992px) {
     /************************* OFFICE SECTION **********************/
     .office_section {
@@ -668,6 +690,9 @@
         left: 5%;
         align-items: flex-end;
         bottom: 0.5%;
+    }
+    .btn_to_scroll {
+        bottom: 15%;
     }
 }
 
