@@ -9,6 +9,7 @@ btnFigure.addEventListener("mouseenter", (e) => {
 btnFigure.addEventListener("mouseleave", (e) => {
     iconFleche.style.marginLeft = "10px"
 })
+
 ratio = .3
 const options = {
     root: null,
@@ -16,23 +17,25 @@ const options = {
     threshold: ratio
 }
 
-const handleIntersect = function(entries, observer) {
-    entries.forEach(function(entry) {
-        if (entry.intersectionRatio > ratio) {
-            entry.target.classList.add("reveal_y_visible")
-            observer.unobserve(entry.target)
-        }
+window.addEventListener("DOMContentLoaded", (event) => {
+    const handleIntersect = function(entries, observer) {
+        entries.forEach(function(entry) {
+            if (entry.intersectionRatio > ratio) {
+                entry.target.classList.add("reveal_y_visible")
+                observer.unobserve(entry.target)
+            }
 
+        })
+    }
+
+    const observer = new IntersectionObserver(handleIntersect, options);
+    document.querySelectorAll('[class*="reveal_y_"]').forEach(function(r) {
+        observer.observe(r)
     })
-}
-
-const observer = new IntersectionObserver(handleIntersect, options);
-document.querySelectorAll('[class*="reveal_y_"]').forEach(function(r) {
-    observer.observe(r)
-})
-document.querySelectorAll(".reveal_x_left").forEach(function(r) {
-    observer.observe(r)
-})
-document.querySelectorAll(".reveal_x_rigth").forEach(function(r) {
-    observer.observe(r)
-})
+    document.querySelectorAll(".reveal_x_left").forEach(function(r) {
+        observer.observe(r)
+    })
+    document.querySelectorAll(".reveal_x_rigth").forEach(function(r) {
+        observer.observe(r)
+    })
+});
